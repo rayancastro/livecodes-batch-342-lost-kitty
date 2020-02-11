@@ -1,3 +1,4 @@
 class Pet < ApplicationRecord
-  validates :species, inclusion: { in: %w(dog cat rabbit cow goat pig) }
+  SPECIES = %w(dog cat rabbit cow goat pig fish starfish)
+  validates :species, inclusion: { in: SPECIES }
 end
